@@ -1,1 +1,1 @@
-# Pink-Archive
+# Pink Archive
