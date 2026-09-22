@@ -15,7 +15,10 @@ export function CodigoBarras({ valor, alto = 32, className = '' }: Props) {
     <svg
       viewBox={`0 0 ${largo} ${alto}`}
       preserveAspectRatio="none"
-      className={`h-8 w-36 fill-current ${className}`}
+      /* Un módulo = 1px: por debajo las barras estrechas se funden y deja de
+         leerse. En pantallas estrechas max-w lo encoge antes que desbordar. */
+      style={{ width: largo }}
+      className={`h-8 max-w-[45vw] fill-current ${className}`}
       role="img"
       aria-label={`Código de barras ${valor}`}
       shapeRendering="crispEdges"
