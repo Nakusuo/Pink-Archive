@@ -69,6 +69,8 @@
   font-weight: 800;
   font-stretch: 68%;
   letter-spacing: -0.01em;
+  /* Al estrechar tanto, el espacio entre palabras se come; se devuelve aquí. */
+  word-spacing: 0.1em;
   line-height: 0.92;
   text-transform: uppercase;
 }
