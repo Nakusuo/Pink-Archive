@@ -1,1 +1,92 @@
 @import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Pink Archive — sistema de diseño
+   Estética de ficha de museo: papel crudo, tinta casi negra, reglas finas y un
+   solo acento rosa. Cambiar la marca = cambiar este bloque; ningún componente
+   conoce un hex.
+   Las fuentes se cargan en index.html (con preconnect) para no bloquear el
+   render con un @import encadenado.
+   --------------------------------------------------------------------------- */
+
+@theme {
+  --color-papel: #ece8e1;
+  --color-papel-claro: #f4f1ec;
+  --color-papel-oscuro: #dfd9cf;
+  --color-tinta: #1a1a1a;
+  --color-tinta-suave: #4a4743;
+
+  /* Dos rosas con trabajos distintos:
+     - `rosa` es para bloques y superficies (el cuadrito del pie, el sello).
+       Sobre el papel se queda en 3.3:1, así que NUNCA como texto pequeño.
+     - `rosa-tinta` es el mismo tono oscurecido: 4.6:1 sobre el papel, pasa AA
+       y es el que llevan las etiquetas de los campos. */
+  --color-rosa: #e8457e;
+  --color-rosa-tinta: #c2255c;
+  --color-rosa-palido: #f6d5e0;
+
+  /* Carcasas de los objetos (disquete, cinta). */
+  --color-carcasa: #1f1f21;
+  --color-carcasa-borde: #333336;
+  --color-metal: #c9c9c6;
+
+  --font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --ease-archivo: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-papel);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100dvh;
+    /* Grano de papel: un ruido SVG muy tenue para que el crema no se vea plano
+       en pantallas grandes. Es un data URI, no una petición más. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    background: var(--color-rosa);
+    color: var(--color-papel-claro);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-rosa-tinta);
+    outline-offset: 3px;
+  }
+}
+
+@utility titular {
+  /* El titular condensado de los carteles: Archivo estrechado al máximo. */
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 68%;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+@utility rotulo {
+  /* Texto de etiqueta: versalitas pequeñas, algo ensanchado. */
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
