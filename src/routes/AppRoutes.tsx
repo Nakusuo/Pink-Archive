@@ -1,9 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
+import { Marco } from '../components/layout/Marco'
+import { IndicePage } from '../pages/IndicePage'
 
 export function AppRoutes() {
   return (
-    <Routes>
-      <Route path="*" element={<p>Pink Archive</p>} />
-    </Routes>
+    <Marco>
+      <Routes>
+        <Route index element={<IndicePage />} />
+        <Route path="*" element={<IndicePage />} />
+      </Routes>
+    </Marco>
   )
 }
