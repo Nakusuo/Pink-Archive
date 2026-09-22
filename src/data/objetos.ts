@@ -14,7 +14,7 @@ import type { EntradaArchivo } from '../types/objeto'
    --------------------------------------------------------------------------- */
 
 export const ENTRADAS: EntradaArchivo[] = [
-  // --- Dibujos y videos, en el orden en que se hicieron ---------------------
+  // --- Dibujos y videos ------------------------------------------------------
   {
     id: 'party',
     titulo: 'Party',
@@ -85,7 +85,7 @@ export const ENTRADAS: EntradaArchivo[] = [
     titulo: 'En el metro',
     subtitulo: 'Ilustración digital',
     tipo: 'dibujo',
-    fecha: '2026-06-10', // POR CONFIRMAR
+    fecha: '2026-06-05', // POR CONFIRMAR
     ocasion: 'Nuestra salida',
     tecnica: 'Digital · Ibis Paint',
     medidas: '3072 × 3072 px',
@@ -99,7 +99,7 @@ export const ENTRADAS: EntradaArchivo[] = [
     titulo: 'Miradas',
     subtitulo: 'Ilustración digital',
     tipo: 'dibujo',
-    fecha: '2026-07-05', // POR CONFIRMAR: antes de la FIL
+    fecha: '2026-06-15', // POR CONFIRMAR: antes del 20/06, es la carátula de 4 meses
     tecnica: 'Digital · Ibis Paint',
     medidas: '4096 × 4096 px',
     descripcion: 'Dos pares de ojos en neón, uno rosa y otro azul, mirando fijo desde el negro.',
@@ -121,31 +121,53 @@ export const ENTRADAS: EntradaArchivo[] = [
     medios: { imagen: 'archivo/recuerdos-de-la-fil/dibujo.jpg' },
   },
 
-  // --- Webs: fechas, capturas y enlaces por completar -----------------------
+  // --- Webs: fecha = creación del repositorio en GitHub ---------------------
   {
     id: '4skate',
-    titulo: '4skate',
-    subtitulo: 'Página web',
+    titulo: '4 meses',
+    subtitulo: 'Cápsula del tiempo interactiva',
     tipo: 'web',
-    fecha: '2026-08-05', // POR CONFIRMAR
+    fecha: '2026-06-20',
+    ocasion: '4 meses',
     tecnica: 'HTML, CSS y JavaScript',
-    descripcion: 'Descripción pendiente.',
+    medidas: 'WinGei 98',
+    descripcion:
+      'Un escritorio de Windows 98 que arranca con «cargando 4 meses» y guarda recuerdos en sus ventanas. Trae reproductor de CD, y la carátula es Miradas.',
+    etiquetas: ['retro', 'cápsula del tiempo', 'música'],
     medios: {
-      // imagen: 'archivo/4skate/portada.jpg',
-      // url: 'https://…',
+      imagen: 'archivo/4skate/portada.jpg',
+      url: 'https://nakusuo.github.io/4Skate/',
     },
   },
   {
     id: '5555',
-    titulo: '5555',
-    subtitulo: 'Página web',
+    titulo: 'The Way I See You',
+    subtitulo: 'Escenario interactivo',
     tipo: 'web',
-    fecha: '2026-08-10', // POR CONFIRMAR
+    fecha: '2026-07-11',
     tecnica: 'HTML, CSS y JavaScript',
-    descripcion: 'Descripción pendiente.',
+    descripcion:
+      '«Every little thing here has a story to tell». Un lugar para recorrer y descubrir: cada cosita que encuentras guarda un pensamiento sobre ti.',
+    etiquetas: ['exploración', 'pensamientos'],
     medios: {
-      // imagen: 'archivo/5555/portada.jpg',
-      // url: 'https://…',
+      imagen: 'archivo/5555/portada.jpg',
+      url: 'https://nakusuo.github.io/5555/',
+    },
+  },
+  {
+    id: '5minutos',
+    titulo: 'Borrow My Eyes',
+    subtitulo: 'Página web interactiva',
+    tipo: 'web',
+    fecha: '2026-07-29',
+    tecnica: 'HTML, CSS y JavaScript',
+    medidas: '6 rincones',
+    descripcion:
+      '«¿Me prestas cinco minutos de tu cabeza? Yo mientras te presto la mía». Un bosque con rincones: lo que veo cuando dudas, cuando creas, cuando estás lejos, cuando estás cansada, un momento a solas y un lugar para descansar.',
+    etiquetas: ['bosque', 'lo que veo'],
+    medios: {
+      imagen: 'archivo/5minutos/portada.jpg',
+      url: 'https://nakusuo.github.io/5minutos/',
     },
   },
   {
@@ -153,15 +175,15 @@ export const ENTRADAS: EntradaArchivo[] = [
     titulo: 'Te hice algo',
     subtitulo: 'Página web interactiva',
     tipo: 'web',
-    fecha: '2026-08-14', // POR CONFIRMAR
+    fecha: '2026-09-08',
     tecnica: 'HTML, CSS y JavaScript',
-    medidas: '5 recorridos',
+    medidas: '6 recorridos',
     descripcion:
-      'Un ramo de flores que se abre en cinco caminos: una carta, un jardín de recuerdos, una cajita con lo que no sé decirte, un viaje lejos de todo y lo que veo.',
+      'Un ramo de flores que se abre en caminos: una carta, un jardín de recuerdos, una cajita con lo que no sé decirte, un viaje lejos de todo, lo que veo y una última cosa, la que no cabía en ninguna cajita.',
     etiquetas: ['flores', 'carta', 'recuerdos'],
     medios: {
       imagen: 'archivo/te-hice-algo/portada.jpg',
-      url: 'https://nakusuo.github.io/', // POR CONFIRMAR: la ruta completa del repo
+      url: 'https://nakusuo.github.io/MxG/',
     },
   },
 ]
