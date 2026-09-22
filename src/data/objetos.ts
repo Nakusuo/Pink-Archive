@@ -17,16 +17,16 @@ export const ENTRADAS: EntradaArchivo[] = [
   // --- Dibujos y videos ------------------------------------------------------
   {
     id: 'party',
-    titulo: 'Party',
+    titulo: 'Party Poison',
     subtitulo: 'Fanart',
     tipo: 'dibujo',
-    fecha: '2026-02-15', // POR CONFIRMAR: antes del 20 de marzo
-    ocasion: 'Recién nos conocimos',
+    fecha: '2026-02-25', // POR CONFIRMAR: poco después de conocerse (los 4 meses caen el 20/06)
+    ocasion: 'Recién te conocí',
     tecnica: 'Digital · Ibis Paint',
     medidas: '1280 × 1280 px',
     descripcion:
-      'Un fanart, por decirlo así, de cuando recién te conocí: mi forma de decirte que te apreciaba. Chaqueta azul, guantes sin dedos, gafas y finger guns.',
-    etiquetas: ['retrato', 'el primero'],
+      'Tú vestida de Party Poison, de cuando recién te conocí. Mi forma de decirte «te aprecio», jaja: chaqueta azul, guantes sin dedos, gafas y finger guns.',
+    etiquetas: ['fanart', 'killjoys', 'el primero'],
     medios: { imagen: 'archivo/party/dibujo.jpg' },
   },
   {
@@ -35,12 +35,12 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Edit con letra',
     tipo: 'video',
     fecha: '2026-03-20',
-    ocasion: 'Después de ir al cine',
+    ocasion: 'Un trend, después del cine',
     tecnica: 'Edición de video',
     medidas: '0:36 min',
     descripcion:
-      'Hecho después de que fuéramos al cine. Bandito y Paladin Strait de twenty one pilots, cara a cara, con la letra apareciendo en pantalla: «I\'m a ban-, I\'m a bandito».',
-    etiquetas: ['twenty one pilots', 'música', 'cine'],
+      'Lo hicimos siguiendo un trend de twenty one pilots, después de ir al cine: Bandito y Paladin Strait cara a cara, con la letra apareciendo en pantalla. «I\'m a ban-, I\'m a bandito».',
+    etiquetas: ['twenty one pilots', 'trend', 'cine'],
     medios: {
       video: 'archivo/bandito/video.mp4',
       imagen: 'archivo/bandito/poster.jpg',
@@ -56,7 +56,7 @@ export const ENTRADAS: EntradaArchivo[] = [
     tecnica: 'Animación digital',
     medidas: '0:20 min',
     descripcion:
-      '«I\'ve got 2 tickets to Hayley\'s show, baby :D». Teenage Dirtbag reescrita para invitarte a ver a Hayley Williams conmigo el 20 de noviembre: come with me Friday, don\'t say maybe.',
+      '«I\'ve got 2 tickets to Hayley\'s show, baby :D». Teenage Dirtbag reescrita para invitarte a ver a Hayley Williams conmigo: come with me Friday, don\'t say maybe. Quedaba perfecto… hasta que movieron el show para un sábado.',
     etiquetas: ['animación', 'concierto', 'hayley williams'],
     medios: {
       video: 'archivo/hayleys-show/video.mp4',
@@ -73,7 +73,7 @@ export const ENTRADAS: EntradaArchivo[] = [
     tecnica: 'Animación digital',
     medidas: '0:13 min',
     descripcion:
-      '«But I won\'t feel like I always… \'cause somewhere in the crowd there\'s». Una multitud en gris, una cara tapada de azul que se descubre, y la frase cortada justo antes del final.',
+      'Así me siento desde que te conocí: en medio de toda la gente, cuando estoy contigo, ya no me siento sola. «\'Cause somewhere in the crowd there\'s you».',
     etiquetas: ['animación', 'música', 'aniversario'],
     medios: {
       video: 'archivo/somewhere-in-the-crowd/video.mp4',
@@ -86,12 +86,12 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Ilustración digital',
     tipo: 'dibujo',
     fecha: '2026-06-05', // POR CONFIRMAR
-    ocasion: 'Nuestra salida',
+    ocasion: 'Volviendo juntas',
     tecnica: 'Digital · Ibis Paint',
     medidas: '3072 × 3072 px',
     descripcion:
-      'De pie en el metro: un brazo arriba en el pasamanos, una cabeza apoyada en el hombro y los ojos cerrados.',
-    etiquetas: ['tú y yo', 'salida'],
+      'Ese momento en que regresamos juntas en el metro y algo empezaba a surgir.',
+    etiquetas: ['tú y yo', 'metro', 'el comienzo'],
     medios: { imagen: 'archivo/en-el-metro/dibujo.jpg' },
   },
   {
@@ -100,10 +100,12 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Ilustración digital',
     tipo: 'dibujo',
     fecha: '2026-06-15', // POR CONFIRMAR: antes del 20/06, es la carátula de 4 meses
+    ocasion: 'El trend de TV Girl',
     tecnica: 'Digital · Ibis Paint',
     medidas: '4096 × 4096 px',
-    descripcion: 'Dos pares de ojos en neón, uno rosa y otro azul, mirando fijo desde el negro.',
-    etiquetas: ['neón'],
+    descripcion:
+      'Por el trend de TV Girl: dos pares de ojos en neón, uno rosa y otro azul, mirando fijo desde el negro.',
+    etiquetas: ['tv girl', 'trend', 'neón'],
     medios: { imagen: 'archivo/miradas/dibujo.jpg' },
   },
   {
@@ -128,11 +130,11 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Cápsula del tiempo interactiva',
     tipo: 'web',
     fecha: '2026-06-20',
-    ocasion: '4 meses',
+    ocasion: 'Geiversario de 4 meses',
     tecnica: 'HTML, CSS y JavaScript',
     medidas: 'WinGei 98',
     descripcion:
-      'Un escritorio de Windows 98 que arranca con «cargando 4 meses» y guarda recuerdos en sus ventanas. Trae reproductor de CD, y la carátula es Miradas.',
+      'Por nuestro geiversario de 4 meses: una amistad que se estaba volviendo algo más, quizá. Un escritorio de Windows 98 que arranca con «cargando 4 meses» y guarda recuerdos en sus ventanas; hasta trae reproductor de CD, con Miradas de carátula.',
     etiquetas: ['retro', 'cápsula del tiempo', 'música'],
     medios: {
       imagen: 'archivo/4skate/portada.jpg',
@@ -145,9 +147,10 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Escenario interactivo',
     tipo: 'web',
     fecha: '2026-07-11',
+    ocasion: 'El 5.º mes',
     tecnica: 'HTML, CSS y JavaScript',
     descripcion:
-      '«Every little thing here has a story to tell». Un lugar para recorrer y descubrir: cada cosita que encuentras guarda un pensamiento sobre ti.',
+      'Solías tener dudas, así que decidí regalarte esto por el quinto mes. «Every little thing here has a story to tell»: un lugar para recorrer donde cada cosita guarda algo que pienso de ti.',
     etiquetas: ['exploración', 'pensamientos'],
     medios: {
       imagen: 'archivo/5555/portada.jpg',
@@ -160,11 +163,12 @@ export const ENTRADAS: EntradaArchivo[] = [
     subtitulo: 'Página web interactiva',
     tipo: 'web',
     fecha: '2026-07-29',
+    ocasion: 'Para los días difíciles',
     tecnica: 'HTML, CSS y JavaScript',
     medidas: '6 rincones',
     descripcion:
-      '«¿Me prestas cinco minutos de tu cabeza? Yo mientras te presto la mía». Un bosque con rincones: lo que veo cuando dudas, cuando creas, cuando estás lejos, cuando estás cansada, un momento a solas y un lugar para descansar.',
-    etiquetas: ['bosque', 'lo que veo'],
+      'Tus crisis empezaron a ser muy seguidas y te sentía llena de dudas y miedos. Quería que supieras que siempre estoy ahí. «¿Me prestas cinco minutos de tu cabeza? Yo mientras te presto la mía». Un bosque con rincones: lo que veo cuando dudas, cuando creas, cuando estás lejos, cuando estás cansada…',
+    etiquetas: ['bosque', 'lo que veo', 'siempre estoy'],
     medios: {
       imagen: 'archivo/5minutos/portada.jpg',
       url: 'https://nakusuo.github.io/5minutos/',
