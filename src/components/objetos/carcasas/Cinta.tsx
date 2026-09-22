@@ -13,10 +13,14 @@ interface Props {
    que se lleva bien con móviles y pantalla completa. */
 export function Cinta({ objeto }: Props) {
   const [fallo, setFallo] = useState(false)
+  /* Casi todo lo que se graba con el móvil es vertical: en una cinta ancha
+     quedaría una franja fina entre dos bandas negras enormes. Se sabe al
+     leer los metadatos, así que la carcasa se estrecha en ese momento. */
+  const [vertical, setVertical] = useState(false)
   const { video, imagen } = objeto.medios
 
   return (
-    <div className="mx-auto w-full max-w-3xl rounded-md bg-carcasa p-3 shadow-[0_24px_40px_-18px_rgb(0_0_0/0.55)] sm:p-4">
+    <div className={`mx-auto w-full ${vertical ? 'max-w-md' : 'max-w-3xl'} rounded-md bg-carcasa p-3 shadow-[0_24px_40px_-18px_rgb(0_0_0/0.55)] sm:p-4`}>
       <div className="overflow-hidden rounded-[3px]">
         <EtiquetaObjeto objeto={objeto} compacta />
       </div>
@@ -34,6 +38,9 @@ export function Cinta({ objeto }: Props) {
             playsInline
             preload="metadata"
             onError={() => setFallo(true)}
+            onLoadedMetadata={(e) =>
+              setVertical(e.currentTarget.videoHeight > e.currentTarget.videoWidth)
+            }
             className="mx-auto block max-h-[70vh] w-full object-contain"
           >
             Tu navegador no puede reproducir este video.
